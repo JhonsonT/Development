@@ -1,0 +1,13 @@
+import groovy.json.JsonParser
+import groovy.json.JsonSlurper
+
+def slurper = new JsonSlurper()
+def jsonObject = slurper.parseText('{"name":"jason","age":18}')
+println jsonObject.name
+println jsonObject.age
+
+def jsonArray = slurper.parseText('[{"name":"jason","age":18},{"name":"jaso11n","age":19}]')
+println jsonArray[0].name
+println jsonArray[1].age
+println jsonArray.name
+println jsonArray.age
